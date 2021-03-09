@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HCekwKQ6EeqWT5IMlMMYbA" name="DiagramaLab10">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_HJbhUKQ6EeqWT5IMlMMYbA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_uaiwQKQ6EeqWT5IMlMMYbA" name="Usuario">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DS5fMKQ7EeqWT5IMlMMYbA" name="nome" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KkSpMKQ7EeqWT5IMlMMYbA" name="cpf" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MDxe8KQ7EeqWT5IMlMMYbA" name="dtNascimento" visibility="private" type="_9XJL0KTREeqeWL_BNUf1UA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3T46EKQ7EeqWT5IMlMMYbA" name="numCartao" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0GF5oKRBEeqWT5IMlMMYbA" name="posicao" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZdOzYKQ7EeqWT5IMlMMYbA" name="Passageiro">
+    <generalization xmi:type="uml:Generalization" xmi:id="_jkKAEKQ7EeqWT5IMlMMYbA" general="_uaiwQKQ6EeqWT5IMlMMYbA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EB4dYKRBEeqWT5IMlMMYbA" name="solicitaViagem"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cJXCcKQ7EeqWT5IMlMMYbA" name="Motorista">
+    <generalization xmi:type="uml:Generalization" xmi:id="_m6xWkKQ7EeqWT5IMlMMYbA" general="_uaiwQKQ6EeqWT5IMlMMYbA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6vCyUKQ7EeqWT5IMlMMYbA" name="numHabilitacao" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8V3mMKQ7EeqWT5IMlMMYbA" name="veiculos" visibility="private" type="_Hi3DEKQ8EeqWT5IMlMMYbA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vUpn0KTZEeqeWL_BNUf1UA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vIiecKTZEeqeWL_BNUf1UA" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Hi3DEKQ8EeqWT5IMlMMYbA" name="Veiculo">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_O4ZGMKQ8EeqWT5IMlMMYbA" name="placa" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_P5syMKQ8EeqWT5IMlMMYbA" name="ano" visibility="private" type="_9XJL0KTREeqeWL_BNUf1UA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RXT_sKQ8EeqWT5IMlMMYbA" name="proprietario" visibility="private" type="_cJXCcKQ7EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_K4tkkKQ8EeqWT5IMlMMYbA" name="VeiculoComum">
+    <generalization xmi:type="uml:Generalization" xmi:id="_4G-ucKQ8EeqWT5IMlMMYbA" general="_Hi3DEKQ8EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_L4Ev0KQ8EeqWT5IMlMMYbA" name="VeiculoLuxo">
+    <generalization xmi:type="uml:Generalization" xmi:id="_5HaQsKQ8EeqWT5IMlMMYbA" general="_Hi3DEKQ8EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_YmgKQKQ8EeqWT5IMlMMYbA" visibility="public" memberEnd="_Ymva0KQ8EeqWT5IMlMMYbA _YmwB4qQ8EeqWT5IMlMMYbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YmuMsKQ8EeqWT5IMlMMYbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YmuMsaQ8EeqWT5IMlMMYbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Ymva0KQ8EeqWT5IMlMMYbA" name="veiculo" type="_Hi3DEKQ8EeqWT5IMlMMYbA" aggregation="shared" association="_YmgKQKQ8EeqWT5IMlMMYbA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qbGNQKQ8EeqWT5IMlMMYbA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qMYb0KQ8EeqWT5IMlMMYbA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_YmwB4qQ8EeqWT5IMlMMYbA" name="motorista" type="_cJXCcKQ7EeqWT5IMlMMYbA" association="_YmgKQKQ8EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NwnwYKQ9EeqWT5IMlMMYbA" name="Viagem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_H9F2EKQ-EeqWT5IMlMMYbA" name="paradas" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_koDlsqQ-EeqWT5IMlMMYbA" name="parada" type="_en2WwKQ-EeqWT5IMlMMYbA" aggregation="composite" association="_koC-oKQ-EeqWT5IMlMMYbA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_koDls6Q-EeqWT5IMlMMYbA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_koEMwKQ-EeqWT5IMlMMYbA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BMw8UKQ_EeqWT5IMlMMYbA" name="passageiros" visibility="private"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_en2WwKQ-EeqWT5IMlMMYbA" name="Parada">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RehlQKTcEeqeWL_BNUf1UA" name="entrando"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_S5g8kKTcEeqeWL_BNUf1UA" name="saindo"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_koC-oKQ-EeqWT5IMlMMYbA" memberEnd="_koDlsqQ-EeqWT5IMlMMYbA _koEMwaQ-EeqWT5IMlMMYbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_koDlsKQ-EeqWT5IMlMMYbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_koDlsaQ-EeqWT5IMlMMYbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_koEMwaQ-EeqWT5IMlMMYbA" name="viagem" type="_NwnwYKQ9EeqWT5IMlMMYbA" association="_koC-oKQ-EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2bJM0KQ-EeqWT5IMlMMYbA" memberEnd="_2bLpEKQ-EeqWT5IMlMMYbA _2bNeQKQ-EeqWT5IMlMMYbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2bKa8KQ-EeqWT5IMlMMYbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2bLCAKQ-EeqWT5IMlMMYbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2bLpEKQ-EeqWT5IMlMMYbA" name="viagem" type="_NwnwYKQ9EeqWT5IMlMMYbA" association="_2bJM0KQ-EeqWT5IMlMMYbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2bNeQKQ-EeqWT5IMlMMYbA" name="passageiro" type="_ZdOzYKQ7EeqWT5IMlMMYbA" association="_2bJM0KQ-EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iG2XwKQ_EeqWT5IMlMMYbA" memberEnd="_iG4M8aQ_EeqWT5IMlMMYbA _iG6CIKQ_EeqWT5IMlMMYbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iG3l4KQ_EeqWT5IMlMMYbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iG4M8KQ_EeqWT5IMlMMYbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iG4M8aQ_EeqWT5IMlMMYbA" name="viagem" type="_NwnwYKQ9EeqWT5IMlMMYbA" association="_iG2XwKQ_EeqWT5IMlMMYbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iG6CIKQ_EeqWT5IMlMMYbA" name="motorista" type="_cJXCcKQ7EeqWT5IMlMMYbA" association="_iG2XwKQ_EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_j-dZoKQ_EeqWT5IMlMMYbA" memberEnd="_j-fO0qQ_EeqWT5IMlMMYbA _j-hEAKQ_EeqWT5IMlMMYbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j-fO0KQ_EeqWT5IMlMMYbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j-fO0aQ_EeqWT5IMlMMYbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j-fO0qQ_EeqWT5IMlMMYbA" name="viagem" type="_NwnwYKQ9EeqWT5IMlMMYbA" association="_j-dZoKQ_EeqWT5IMlMMYbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_j-hEAKQ_EeqWT5IMlMMYbA" name="veiculo" type="_Hi3DEKQ8EeqWT5IMlMMYbA" association="_j-dZoKQ_EeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZUAzsKRAEeqWT5IMlMMYbA" name="Gerenciador">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6At6cKRAEeqWT5IMlMMYbA" name="encontraMotorista"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EK_goKRCEeqWT5IMlMMYbA" name="iniciaViagem"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_NBMsUKRCEeqWT5IMlMMYbA" name="calculaPreco"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CDAV4KRBEeqWT5IMlMMYbA" memberEnd="_CDA88KRBEeqWT5IMlMMYbA _CDA88aRBEeqWT5IMlMMYbA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CDAV4aRBEeqWT5IMlMMYbA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CDAV4qRBEeqWT5IMlMMYbA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_CDA88KRBEeqWT5IMlMMYbA" name="gerenciador" type="_ZUAzsKRAEeqWT5IMlMMYbA" association="_CDAV4KRBEeqWT5IMlMMYbA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_CDA88aRBEeqWT5IMlMMYbA" name="passageiro" type="_ZdOzYKQ7EeqWT5IMlMMYbA" association="_CDAV4KRBEeqWT5IMlMMYbA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9XJL0KTREeqeWL_BNUf1UA" name="Data">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gFX-EKTVEeqeWL_BNUf1UA" name="dia" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_idHRgKTVEeqeWL_BNUf1UA" name="mes" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jOBKAKTVEeqeWL_BNUf1UA" name="ano" visibility="private"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DBgtoKTSEeqeWL_BNUf1UA" memberEnd="_DBii0KTSEeqeWL_BNUf1UA _DBk_EKTSEeqeWL_BNUf1UA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DBh7wKTSEeqeWL_BNUf1UA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DBh7waTSEeqeWL_BNUf1UA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DBii0KTSEeqeWL_BNUf1UA" name="usuario" type="_uaiwQKQ6EeqWT5IMlMMYbA" association="_DBgtoKTSEeqeWL_BNUf1UA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DBk_EKTSEeqeWL_BNUf1UA" name="data" type="_9XJL0KTREeqeWL_BNUf1UA" association="_DBgtoKTSEeqeWL_BNUf1UA"/>
+  </packagedElement>
+</uml:Model>
